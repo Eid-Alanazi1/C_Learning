@@ -1,58 +1,25 @@
 #include <stdio.h>
-int main() {
-float salary ;
-float rent ;
-float bills ;
-float reward ;
-char answer ;
-char AnswerBills ;
-char AnswerReward;
+#include <stdbool.h>
 
+int main () {
+    int Age = 17 ;
+    bool isCitizen = true ;
 
-printf("please enter your salary = ");
-scanf(" %f" , &salary);
+    if ( Age >= 18 ){
+        printf("you can vote \n");
+        if (isCitizen) { 
+            printf(" you citizen you can vote ");
 
-printf("do you have rent ? (Y/N) ");
-scanf(" %c" , &answer);
-if (answer == 'Y' || answer == 'y')
-{
-    printf("how much is your rent = ");
-    scanf(" %f" , &rent);
-}
-else{ 
-    rent = 0 ;
-}
-printf("do you have any bills (Y/N) ");
-scanf(" %c" , &AnswerBills);
-if(AnswerBills == 'Y' || AnswerBills == 'y')
-{
-    printf("How much is your bills = ");
-    scanf(" %f" , &bills);
-}
-    else {
-        bills = 0 ;
-    }
-
-    printf("Do have any reward (Y/N) ");
-    scanf(" %c" , &AnswerReward);
-    if(AnswerReward == 'Y' || AnswerReward == 'y'  )
-    {
-        printf("How much is your Reward = ");
-        scanf(" %f" , &reward );
+        }
+        else {
+            printf("You must be citizen to vote ");
+        }
     } 
-    else{
-        reward = 0 ;
+        else{
+            printf(" you under 18 you cant vote");
+        }
     }
-    salary -=rent ;
-    salary -=bills;
-    salary +=reward;
-    printf("The remainder of your salary is = %f " , salary);
-
-    }
-
+    
+    
 
   
-
-
-
-
